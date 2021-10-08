@@ -1,0 +1,37 @@
+{
+  "name": "dialog",
+  "version": "1.0.0",
+  "description": "Service for the integration of 1C and Dialogflow CX",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HardAndHeavy/dialog.git"
+  },
+  "keywords": [
+    "dialogflow",
+    "dialog",
+    "1c"
+  ],
+  "author": "Ivan Grigorev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HardAndHeavy/dialog/issues"
+  },
+  "homepage": "https://github.com/HardAndHeavy/dialog#readme",
+  "dependencies": {
+    "@assistant/conversation": "^3.8.1",
+    "@google-cloud/dialogflow-cx": "^2.14.0",
+    "axios": "^0.22.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
+  }
+}
