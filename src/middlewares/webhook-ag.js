@@ -7,27 +7,15 @@ export default () => {
   const intents = [];
 
   const hendler = (intent) => async (conv) => {
-    try {
-      const { text, updatedSession } = await connect1c({
-        source: 'ActionOnGoogle',
-        intent,
-        payload: conv.user.params.tokenPayload,
-        params: conv.intent.params,
-        session: conv.session.params,
-      });
-      conv.session.params = updatedSession; // eslint-disable-line
-      conv.add(text);
-    } catch (err) {
-      if (err.response) {
-        if (err.response.status === 403) {
-          conv.add(`Отказано в доступе. Пожалуйста сообщите свой ID ${conv.user.params.tokenPayload.email} администратору, чтобы он расширил права.`);
-        } else {
-          conv.add(`Ошибка ${err.response.status} "${err.message}".`);
-        }
-      } else {
-        conv.add(`Произошла неизвестная ошибка "${err.message}".`);
-      }
-    }
+    const { text, updatedSession } = await connect1c({
+      source: 'ActionOnGoogle',
+      intent,
+      payload: conv.user.params.tokenPayload,
+      params: conv.intent.params,
+      session: conv.session.params,
+    });
+    conv.session.params = updatedSession; // eslint-disable-line
+    conv.add(text);
   };
 
   const addIntent = (intent) => {
