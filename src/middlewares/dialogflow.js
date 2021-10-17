@@ -2,6 +2,9 @@ import { SessionsClient } from '@google-cloud/dialogflow-cx';
 import fs from 'fs';
 
 export default () => {
+  if (!process.env.DF_CLIENT_EMAIL) {
+    return () => ({});
+  }
   const client = new SessionsClient(
     {
       apiEndpoint: `${process.env.DF_LOCATION}-dialogflow.googleapis.com`,
