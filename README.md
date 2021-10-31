@@ -6,9 +6,8 @@
 
 * Docker
 
-### Настройка
-
-Настраиваем *.env* файл корне проекта:
+### Настройка .env
+Необходимо расположить файл *.env* в корне проекта. Данные:
 ```
 NODE_ENV=production
 BASE_1C_HOST=http://ИМЯ_МАШИНЫ_1С/demo_dialog/hs/dialog
@@ -30,13 +29,14 @@ DF_LANGUAGE_CODE=ru
 - `BASE_1C_TOKEN` — внутренний ключ для работы http-сервиса. В базе 1С он хранится в константе *Dialog base-1c-token*
 - `AG_CLIENT_ID` — *Client ID*, который нам выдал Google Ассистент для связывания аккаунта
 - `DIALOG_TOKEN` — внешний ключ для работы http-сервиса. В базе 1С он хранится в константе *Dialog dialog-token*
-- `DF_CLIENT_EMAIL` — сервисный аккаунт. Настраивается в *Google Cloud Platform* в разделе *Service accounts*
+- `DF_CLIENT_EMAIL` — сервисный аккаунт. Настраивается в *Google Cloud Platform* в меню *Service accounts*
 - `DF_PROJECT_ID` — ID проекта. Можно найти в URL после projects
 - `DF_LOCATION` — область в которой был размещен агент
 - `DF_AGENT_ID` — ID агента. Можно найти в URL после agents
 - `DF_LANGUAGE_CODE` — язык, для русского надо указать `ru`
 
-Настраиваем *dialogflow.key* файл в каталоге *config*. Ключ создаётся в *Google Cloud Platform* в разделе *Service accounts*. Для `DF_CLIENT_EMAIL` выпускается ключ в разделе *KEYS* в формате JSON файла. Из этого файла вырезается значение поля `private_key` с заменой `\n` на реальный перевод строки.
+### Настройка dialogflow.key
+Необходимо расположить файл *dialogflow.key* в каталоге *config*. Ключ создаётся в *Google Cloud Platform* в меню *Service accounts*. Для `DF_CLIENT_EMAIL` выпускается ключ в разделе *KEYS* в формате JSON файла. Из этого файла копируется значение поля `private_key` с заменой `\n` на реальный перевод строки.
 
 ### Разработка
 
