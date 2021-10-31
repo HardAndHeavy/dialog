@@ -34,7 +34,7 @@ DF_LANGUAGE_CODE=ru
 - `DF_PROJECT_ID` — ID проекта. Можно найти в URL после projects
 - `DF_LOCATION` — область в которой был размещен агент
 - `DF_AGENT_ID` — ID агента. Можно найти в URL после agents
-- `DF_LANGUAGE_CODE` — язык, для русского надо указать — ru
+- `DF_LANGUAGE_CODE` — язык, для русского надо указать `ru`
 
 Настраиваем *dialogflow.key* файл в каталоге *config*. Ключ создаётся в *Google Cloud Platform* в разделе *Service accounts*. Для `DF_CLIENT_EMAIL` выпускается ключ в разделе *KEYS* в формате JSON файла. Из этого файла вырезается значение поля `private_key` с заменой \n на реальный перевод строки.
 
