@@ -48,6 +48,5 @@ $ make start
 
 ### Статьи по работе с сервисом
 
-[Окей, Google](https://grig.top/ok_google/)
-
-[Dialogflow CX](https://grig.top/dialogflow_cx/)
+- [Окей, Google](https://grig.top/ok_google/)
+- [Dialogflow CX](https://grig.top/dialogflow_cx/)
